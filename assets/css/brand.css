@@ -1,0 +1,167 @@
+/* Casa da Buba — fundações da marca (partilhado entre o site e o manual) */
+
+:root {
+  /* Cor — retirada das fotografias da casa */
+  --cal: #F9F9F6;          /* parede caiada */
+  --cal-2: #EEEEE8;
+  --anil: #2340C8;         /* a barra azul */
+  --anil-fundo: #101A5E;   /* mar fundo */
+  --mare: #DCE3F7;         /* reflexo da água na cal */
+  --breu: #16171C;         /* pelo preto */
+  --areia: #E9DCC4;        /* praia de Lagos */
+  --castanho: #5B3A2C;     /* pelo castanho */
+  --rever: #E8A23A;        /* só no modo de revisão */
+
+  --serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --sans: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --raio: 18px;
+  --wrap: 1240px;
+  --gutter: clamp(16px, 4vw, 40px);
+  --ease: cubic-bezier(.2, .7, .2, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--cal);
+  color: var(--breu);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+img { display: block; max-width: 100%; }
+[hidden] { display: none !important; }
+a { color: inherit; }
+button { font: inherit; color: inherit; }
+
+.wrap { width: min(100% - 2 * var(--gutter), var(--wrap)); margin-inline: auto; }
+
+/* Tipografia */
+.serif, h1, h2, h3 {
+  font-family: var(--serif);
+  font-optical-sizing: auto;
+  font-variation-settings: "SOFT" 100, "WONK" 0;
+  font-weight: 560;
+  letter-spacing: -0.02em;
+  line-height: 1.02;
+  margin: 0;
+}
+h1 em, h2 em, h3 em { font-style: italic; font-weight: 480; }
+.eyebrow {
+  font: 600 12.5px/1.2 var(--sans);
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  margin: 0 0 18px;
+}
+
+/* Logótipo */
+.simbolo { height: 1em; width: auto; aspect-ratio: 100 / 124; fill: currentColor; flex: none; }
+.wordmark {
+  font-family: var(--serif);
+  font-variation-settings: "SOFT" 100, "WONK" 0, "opsz" 144;
+  font-weight: 620;
+  letter-spacing: -0.035em;
+  line-height: 1;
+  white-space: nowrap;
+}
+.assinatura {
+  display: inline-flex;
+  align-items: center;
+  gap: .32em;
+  text-decoration: none;
+  color: var(--anil);
+}
+.assinatura .simbolo { height: 1.18em; transform: translateY(-.06em); }
+
+/* A onda — orla da barra. Usa máscara para herdar a cor da secção seguinte */
+.onda {
+  display: block;
+  height: 16px;
+  margin-bottom: -1px;
+  background: var(--anil);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 16'%3E%3Cpath d='M0 8C13.33 0 26.67 0 40 8S66.67 16 80 8V16H0Z'/%3E%3C/svg%3E") 0 0 / 80px 16px repeat-x;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 16'%3E%3Cpath d='M0 8C13.33 0 26.67 0 40 8S66.67 16 80 8V16H0Z'/%3E%3C/svg%3E") 0 0 / 80px 16px repeat-x;
+  animation: mare 9s linear infinite;
+}
+.onda--inv { transform: scaleY(-1); margin: -1px 0 0; }
+@keyframes mare { to { -webkit-mask-position: 80px 0; mask-position: 80px 0; } }
+
+/* Padrão "mar largo" — da calçada portuguesa */
+.mar-largo {
+  background-color: var(--cal);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 24'%3E%3Cg fill='none' stroke='%232340C8' stroke-width='11'%3E%3Cpath d='M0 12C13.33 0 26.67 0 40 12S66.67 24 80 12'/%3E%3Cpath d='M0 -12C13.33 -24 26.67 -24 40 -12S66.67 0 80 -12'/%3E%3Cpath d='M0 36C13.33 24 26.67 24 40 36S66.67 48 80 36'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 80px 24px;
+}
+
+/* Botões */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5em;
+  padding: .95em 1.45em;
+  border-radius: 999px;
+  border: 1.5px solid var(--anil);
+  background: var(--anil);
+  color: var(--cal);
+  font: 600 15px/1 var(--sans);
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform .25s var(--ease), background-color .25s, color .25s;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(0) scale(.98); }
+.btn--linha { background: transparent; color: var(--anil); }
+.btn--linha:hover { background: var(--anil); color: var(--cal); }
+.btn--cal { background: var(--cal); border-color: var(--cal); color: var(--anil); }
+.btn--cal.btn--linha { background: transparent; color: var(--cal); }
+.btn--cal.btn--linha:hover { background: var(--cal); color: var(--anil); }
+.seta { transition: transform .25s var(--ease); }
+a:hover > .seta, button:hover > .seta { transform: translateX(4px); }
+
+:focus-visible { outline: 2.5px solid var(--anil); outline-offset: 3px; border-radius: 6px; }
+
+/* Entrada suave ao fazer scroll */
+.revela { transform: translateY(18px); transition: transform .9s var(--ease); }
+.revela.visto { transform: none; }
+
+/* Modo de revisão: destaca o que falta confirmar com a Casa da Buba */
+body.revisao [data-tbc] {
+  outline: 2px dashed var(--rever);
+  outline-offset: 3px;
+  background-color: rgb(232 162 58 / .14);
+  cursor: help;
+}
+.proto {
+  position: fixed;
+  left: calc(16px + env(safe-area-inset-left, 0px));
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 8px 8px 14px;
+  border-radius: 999px;
+  background: var(--breu);
+  color: var(--cal);
+  font: 500 13px/1 var(--sans);
+  box-shadow: 0 8px 30px rgb(0 0 0 / .18);
+}
+.proto button {
+  border: 0;
+  border-radius: 999px;
+  padding: 7px 12px;
+  background: rgb(255 255 255 / .12);
+  cursor: pointer;
+  font-weight: 600;
+}
+.proto button[aria-pressed="true"] { background: var(--rever); color: var(--breu); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .onda { animation: none; }
+  .revela { transform: none; transition: none; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
