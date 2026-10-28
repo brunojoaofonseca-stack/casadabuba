@@ -5,11 +5,11 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Site Casa da Buba · v2</title>
-<meta name="description" content="Cão de Água Português criado em família em Lagos, no Algarve. Nascidos para a água, nutridos com amor.">
+<meta name="description" content="Cão de Água Português criado em família em Lagos, no Algarve. Lista de espera aberta para a ninhada da primavera de 2027.">
 <link rel="icon" href="../assets/logo/simbolo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,500..900,0..100,0..1&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Fraunces:opsz,wght,SOFT@9..144,600,100&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/v2.css">
 <script>document.documentElement.classList.add('js');</script>
 </head>
@@ -17,116 +17,147 @@
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="simbolo" viewBox="0 0 100 124"><path fill-rule="evenodd" d="M0 124V50a50 50 0 0 1 100 0v74Z M50 60C63.5 60 74 69.5 77.5 82C80.5 92.5 77 102 69 102C64 102 61 100 59 97C57 102.5 54 105 50 105C46 105 43 102.5 41 97C39 100 36 102 31 102C23 102 19.5 92.5 22.5 82C26 69.5 36.5 60 50 60Z M18.57 46.11A7.2 9.3 -32 0 1 28.43 61.89A7.2 9.3 -32 0 1 18.57 46.11ZM37.44 30.82A7.8 9.9 -12 0 1 41.56 50.18A7.8 9.9 -12 0 1 37.44 30.82ZM62.56 30.82A7.8 9.9 12 0 1 58.44 50.18A7.8 9.9 12 0 1 62.56 30.82ZM81.43 46.11A7.2 9.3 32 0 1 71.57 61.89A7.2 9.3 32 0 1 81.43 46.11Z M0 113.5C8.33 110.03 16.67 110.03 25 113.5C33.33 116.97 41.67 116.97 50 113.5C58.33 110.03 66.67 110.03 75 113.5C83.33 116.97 91.67 116.97 100 113.5L100 117.7C91.67 121.17 83.33 121.17 75 117.7C66.67 114.23 58.33 114.23 50 117.7C41.67 121.17 33.33 121.17 25 117.7C16.67 114.23 8.33 114.23 0 117.7Z"/></symbol>
+  <symbol id="i-ondas" viewBox="0 0 24 24"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></symbol>
+  <symbol id="i-olho" viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
+  <symbol id="i-pelo" viewBox="0 0 24 24"><path d="M7 4c2 0 3 1.5 3 3s-1 3-3 3-3 1.5-3 3 1 3 3 3M17 8c2 0 3 1.5 3 3s-1 3-3 3-3 1.5-3 3 1 3 3 3"/></symbol>
+  <symbol id="i-escudo" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></symbol>
 </svg>
 
 <a class="saltar" href="#conteudo">Saltar para o conteúdo</a>
 
 <p class="aviso">Protótipo de site proposto à Casa da Buba. Não é o site oficial. <a href="../index.html">Ver a proposta de identidade</a></p>
 
-<header class="topo" id="topo">
+<header class="topo">
   <div class="caixa topo__in">
-    <a class="marca" href="#inicio" aria-label="Casa da Buba, início">
+    <a class="marca" href="#superficie" aria-label="Casa da Buba, início">
       <svg class="marca__simbolo" viewBox="0 0 100 124" aria-hidden="true"><use href="#simbolo"/></svg>
       <span>Casa da Buba</span>
     </a>
-    <nav aria-label="Principal">
-      <ul class="menu" id="menu">
-        <li><a href="#casa">A casa</a></li>
-        <li><a href="#raca">A raça</a></li>
-        <li><a href="#ninhada">Ninhada 2027</a></li>
-        <li><a href="#visitas">Visitas</a></li>
-      </ul>
+    <nav class="menu" id="menu" aria-label="Principal">
+      <a href="#raca">A raça</a>
+      <a href="#casa">A casa</a>
+      <a href="#ninhada">Ninhada 2027</a>
+      <a href="#salva-vidas">Salva-vidas</a>
     </nav>
     <a class="botao botao--pequeno" href="#contacto">Lista de espera</a>
     <button class="menu-botao" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
   </div>
 </header>
 
+<!-- Medidor de profundidade: mostra o capítulo e deixa saltar -->
+<nav class="medidor" aria-label="Capítulos">
+  <span class="medidor__linha" aria-hidden="true"><span></span></span>
+  <a href="#superficie" data-capitulo="superficie"><span>Superfície</span></a>
+  <a href="#raca" data-capitulo="raca"><span>A raça</span></a>
+  <a href="#casa" data-capitulo="casa"><span>A casa</span></a>
+  <a href="#ninhada" data-capitulo="ninhada"><span>A ninhada</span></a>
+  <a href="#contacto" data-capitulo="contacto"><span>Lista de espera</span></a>
+</nav>
+
 <main id="conteudo">
 
-<!-- A fachada: uma porta por cão, assente na barra azul -->
-<section class="fachada" id="inicio" aria-labelledby="titulo">
-  <div class="caixa fachada__cab">
-    <h1 id="titulo">Nascidos para a água.<br>Nutridos com amor.</h1>
-    <div class="fachada__texto">
-      <p>Cão de Água Português, criado em família em Lagos desde 1990.</p>
-      <a class="botao" href="#contacto">Entrar na lista de espera</a>
+<!-- Superfície: o gancho -->
+<section class="capitulo superficie" id="superficie" aria-labelledby="titulo">
+  <div class="caixa superficie__in">
+    <div class="superficie__texto">
+      <h1 id="titulo">Nascidos para a água. Nutridos com amor.</h1>
+      <p class="lead">Cães de Água Portugueses criados em família, em Lagos, desde 1990.</p>
+      <div class="acoes">
+        <a class="botao" href="#contacto">Entrar na lista de espera</a>
+        <a class="ligacao" href="#raca">Conhecer a raça</a>
+      </div>
+      <div class="contagem" data-tbc="Data prevista do nascimento">
+        <svg class="contagem__simbolo" viewBox="0 0 100 124" aria-hidden="true"><use href="#simbolo"/></svg>
+        <p><b>Próxima ninhada em março de 2027.</b> <span data-dias>Faltam cerca de quatro meses.</span></p>
+      </div>
     </div>
-  </div>
-  <div class="rua">
-    <ul class="portas" id="caes" aria-label="Os cães da casa">
-      <li class="porta" style="--i:0"><div class="porta__arco"><img src="../assets/img/preto-deitado.jpg" width="1334" height="2000" alt="Petra Sarabi, Cão de Água preta, deitada num degrau azul." fetchpriority="high" style="object-position: 45% 30%"></div><p class="porta__placa" data-tbc="Confirmar nome">Petra Sarabi</p></li>
-      <li class="porta" style="--i:1"><div class="porta__arco"><img src="../assets/img/castanho-branco.jpg" width="1536" height="1024" alt="Dylan, Cão de Água castanho e branco, de pé junto a uma porta azul." style="object-position: 33% 50%"></div><p class="porta__placa" data-tbc="Confirmar nome">Dylan</p></li>
-      <li class="porta" style="--i:2"><div class="porta__arco"><img src="../assets/img/preto-branco-porta.jpg" width="950" height="986" alt="Esterella, Cão de Água preta e branca, sentada à porta." style="object-position: 55% 40%"></div><p class="porta__placa" data-tbc="Confirmar nome">Esterella</p></li>
-      <li class="porta" style="--i:3"><div class="porta__arco"><img src="../assets/img/castanho-perfil.jpg" width="1536" height="1025" alt="Noitte Di Fiaba, Cão de Água castanha, de perfil." style="object-position: 38% 50%"></div><p class="porta__placa" data-tbc="Confirmar nome">Noitte Di Fiaba</p></li>
-      <li class="porta" style="--i:4"><div class="porta__arco"><img src="../assets/img/castanho-jovem.jpg" width="1536" height="1025" alt="Gigi, Cão de Água castanha e jovem, junto à barra azul." style="object-position: 37% 50%"></div><p class="porta__placa" data-tbc="Confirmar nome">Gigi</p></li>
-      <li class="porta" style="--i:5"><div class="porta__arco"><img src="../assets/img/preto-jovem.jpg" width="1536" height="1025" alt="Amora, Cão de Água preta com o peito branco, sentada num banco azul." style="object-position: 30% 50%"></div><p class="porta__placa" data-tbc="Confirmar nome">Amora</p></li>
-    </ul>
+    <div class="superficie__fotos">
+      <img class="foto foto--grande" src="../assets/img/salto-perto.jpg" width="1369" height="1276" alt="Cão de Água preto a lançar-se na água em Lagos, entre salpicos." fetchpriority="high">
+      <img class="foto foto--pequena" src="../assets/img/preto-deitado.jpg" width="1334" height="2000" alt="O mesmo género de cão, tranquilo, deitado num degrau azul.">
+    </div>
   </div>
 </section>
 
-<!-- A história, em placas de azulejo -->
-<section class="casa" id="casa" aria-labelledby="casa-titulo">
+<!-- Capítulo 1: a raça -->
+<section class="capitulo raca" id="raca" aria-labelledby="raca-titulo">
   <div class="caixa">
-    <h2 id="casa-titulo">Uma casa contada pelos seus cães</h2>
-    <ol class="azulejos">
-      <li class="azulejo"><span class="azulejo__ano">1990</span><b>Buba</b><span>A primeira. Ia connosco para todo o lado.</span></li>
-      <li class="azulejo"><span class="azulejo__ano" data-tbc="Ano de nascimento da Buba II">Anos 90</span><b>Buba II</b><span>A matriarca que deu nome à casa.</span></li>
-      <li class="azulejo"><span class="azulejo__ano">2000</span><b>Caracóis e Linda</b><span>A primeira ninhada.</span></li>
-      <li class="azulejo"><span class="azulejo__ano">2002</span><b>Petra</b><span>Uma das cadelas que marcaram a casa.</span></li>
-      <li class="azulejo"><span class="azulejo__ano" data-tbc="Ano de arranque do projeto">c. 2006</span><b>Salva-vidas</b><span>Começa o treino de salvamento no mar.</span></li>
-      <li class="azulejo"><span class="azulejo__ano">2012</span><b>Oslo</b><span data-tbc="Confirmar o papel da casa">Doze cães num fiorde norueguês.</span></li>
-      <li class="azulejo"><span class="azulejo__ano">2013</span><b>Noruega a Suíça</b><span data-tbc="Confirmar o papel da casa">48 cães, com a Linda e o Dylan a ensinar.</span></li>
-      <li class="azulejo azulejo--hoje"><span class="azulejo__ano">Hoje</span><b data-tbc="Confirmar os cães atuais">A próxima ninhada</b><span>Nasce na primavera de 2027.</span></li>
-    </ol>
-  </div>
-</section>
-
-<!-- Duas velocidades: o mesmo cão, lado a lado -->
-<section class="diptico" aria-label="Duas velocidades">
-  <figure class="diptico__lado">
-    <img src="../assets/img/preto-deitado.jpg" width="1334" height="2000" alt="Cão de Água preto deitado e tranquilo num degrau azul." loading="lazy" style="object-position: 50% 35%">
-    <figcaption><b>Em casa.</b> Tranquilo, colado à família, onde as pessoas estão.</figcaption>
-  </figure>
-  <figure class="diptico__lado">
-    <img src="../assets/img/salto-perto.jpg" width="1369" height="1276" alt="Cão de Água preto a lançar-se na água, entre salpicos." loading="lazy" style="object-position: 62% 50%">
-    <figcaption><b>Na água.</b> Brincar é trabalho, e o trabalho é nadar, mergulhar e ir buscar.</figcaption>
-  </figure>
-</section>
-
-<!-- A raça -->
-<section class="raca" id="raca" aria-labelledby="raca-titulo">
-  <div class="caixa raca__in">
-    <div class="raca__cab">
+    <div class="cab">
       <h2 id="raca-titulo">Feito para o mar</h2>
-      <p>A primeira referência em Portugal é de 1297: um cão de pelo negro que trouxe do mar um marinheiro.</p>
+      <p class="lead">A primeira referência em Portugal é de 1297: um cão de pelo negro que trouxe do mar um marinheiro.</p>
     </div>
-    <dl class="tracos">
-      <div><dt>Membranas entre os dedos</dt><dd>Patas palmadas, de nadador nato.</dd></div>
-      <div><dt>Mergulha a fôlego</dt><dd>Fecha a glote e mantém os olhos abertos debaixo de água.</dd></div>
-      <div><dt>Pelo sem subpelo</dt><dd>Cresce sempre, sem muda. Ondulado ou encaracolado.</dd></div>
-      <div><dt>Três níveis de alerta</dt><dd>Rosna, eriça o pelo e só no fim age.</dd></div>
-    </dl>
+    <ul class="tracos">
+      <li class="cartao revela"><svg class="icone" viewBox="0 0 100 124" aria-hidden="true"><use href="#simbolo"/></svg><h3>Membranas entre os dedos</h3><p>Patas palmadas, de nadador nato.</p></li>
+      <li class="cartao revela"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-olho"/></svg><h3>Mergulha a fôlego</h3><p>Fecha a glote e mantém os olhos abertos debaixo de água.</p></li>
+      <li class="cartao revela"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-pelo"/></svg><h3>Pelo sem subpelo</h3><p>Cresce sempre, sem muda. Ondulado ou encaracolado.</p></li>
+      <li class="cartao revela"><svg class="icone" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-escudo"/></svg><h3>Três níveis de alerta</h3><p>Rosna, eriça o pelo e só no fim age.</p></li>
+    </ul>
+    <div class="velocidades">
+      <figure class="cartao-foto revela">
+        <img src="../assets/img/tres-caes.jpg" width="1536" height="1025" alt="Três Cães de Água sentados e tranquilos num banco azul." loading="lazy">
+        <figcaption><b>Em casa</b> Tranquilo, colado à família, onde as pessoas estão.</figcaption>
+      </figure>
+      <figure class="cartao-foto revela">
+        <img src="../assets/img/salto-lagos.jpg" width="1536" height="1025" alt="Três Cães de Água a correr e a saltar na água em Lagos." loading="lazy">
+        <figcaption><b>Na água</b> Brincar é trabalho, e o trabalho é nadar, mergulhar e ir buscar.</figcaption>
+      </figure>
+    </div>
+    <figure class="citacao revela">
+      <blockquote><p>«Ganhavam tanto como os homens.»</p></blockquote>
+      <figcaption>Raul Brandão, sobre os dois cães de cada caíque de Olhão, em 1922. Mergulhavam pelo que caía ao mar e guardavam os barcos.</figcaption>
+    </figure>
+    <a class="ligacao proximo" href="#casa">Continuar: a casa</a>
   </div>
 </section>
 
-<section class="barra-ocre" aria-label="Da história da raça">
-  <figure class="caixa citacao">
-    <blockquote><p>«Ganhavam tanto como os homens.»</p></blockquote>
-    <figcaption>Raul Brandão, sobre os dois cães de cada caíque de Olhão, em 1922. Mergulhavam pelo que caía ao mar e guardavam os barcos; com os motores, deixaram a pesca algarvia nos anos 1930.</figcaption>
-  </figure>
+<!-- Capítulo 2: a casa -->
+<section class="capitulo casa" id="casa" aria-labelledby="casa-titulo">
+  <div class="caixa">
+    <div class="cab">
+      <h2 id="casa-titulo">Uma casa contada pelos seus cães</h2>
+      <p class="lead">De 1990 a hoje, em nomes. Deslize para percorrer.</p>
+    </div>
+  </div>
+  <ol class="trilho" tabindex="0" aria-label="A história da Casa da Buba">
+    <li class="marco"><span class="marco__ano">1990</span><h3>Buba</h3><p>A primeira. Ia connosco para todo o lado.</p></li>
+    <li class="marco"><span class="marco__ano" data-tbc="Ano de nascimento da Buba II">Anos 90</span><h3>Buba II</h3><p>A matriarca que deu nome à casa.</p></li>
+    <li class="marco"><span class="marco__ano">2000</span><h3>Caracóis e Linda</h3><p>A primeira ninhada.</p></li>
+    <li class="marco"><span class="marco__ano">2002</span><h3>Petra</h3><p>Uma das cadelas que marcaram a casa.</p></li>
+    <li class="marco"><span class="marco__ano" data-tbc="Ano de arranque do projeto">c. 2006</span><h3>Salva-vidas</h3><p>Começa o treino de salvamento no mar.</p></li>
+    <li class="marco"><span class="marco__ano">2012</span><h3>Oslo</h3><p data-tbc="Confirmar o papel da casa">Doze cães num fiorde norueguês.</p></li>
+    <li class="marco"><span class="marco__ano">2013</span><h3>Da Noruega à Suíça</h3><p data-tbc="Confirmar o papel da casa">48 cães, com a Linda e o Dylan a ensinar.</p></li>
+    <li class="marco marco--hoje"><span class="marco__ano">Hoje</span><h3>A ninhada de 2027</h3><p>A caminho, na primavera.</p></li>
+  </ol>
+  <div class="caixa">
+    <h3 class="subtitulo">Os cães de hoje</h3>
+    <ul class="caes">
+      <li class="cao revela"><img src="../assets/img/preto-deitado.jpg" width="1334" height="2000" alt="Petra Sarabi, preta, deitada num degrau azul." loading="lazy" style="object-position: 45% 30%"><b data-tbc="Confirmar nome">Petra Sarabi</b><span>Preta, encaracolada</span></li>
+      <li class="cao revela"><img src="../assets/img/castanho-branco.jpg" width="1536" height="1024" alt="Dylan, castanho e branco, junto a uma porta azul." loading="lazy" style="object-position: 33% 50%"><b data-tbc="Confirmar nome">Dylan</b><span>Castanho e branco</span></li>
+      <li class="cao revela"><img src="../assets/img/preto-branco-porta.jpg" width="950" height="986" alt="Esterella, preta e branca, sentada à porta." loading="lazy"><b data-tbc="Confirmar nome">Esterella</b><span>Preta e branca, ondulada</span></li>
+      <li class="cao revela"><img src="../assets/img/castanho-perfil.jpg" width="1536" height="1025" alt="Noitte Di Fiaba, castanha, de perfil." loading="lazy" style="object-position: 38% 50%"><b data-tbc="Confirmar nome">Noitte Di Fiaba</b><span>Castanha, ondulada</span></li>
+      <li class="cao revela"><img src="../assets/img/castanho-jovem.jpg" width="1536" height="1025" alt="Gigi, castanha e jovem, junto à barra azul." loading="lazy" style="object-position: 37% 50%"><b data-tbc="Confirmar nome">Gigi</b><span>Castanha, encaracolada</span></li>
+      <li class="cao revela"><img src="../assets/img/preto-jovem.jpg" width="1536" height="1025" alt="Amora, preta com o peito branco, num banco azul." loading="lazy" style="object-position: 30% 50%"><b data-tbc="Confirmar nome">Amora</b><span>Preta, peito branco</span></li>
+    </ul>
+    <div class="visitas revela" id="visitas">
+      <img src="../assets/img/praia-lagos.jpg" width="1200" height="800" alt="Cães de Água a brincar na praia de Lagos, com barcos à vela e as muralhas do forte ao fundo." loading="lazy">
+      <div>
+        <h3>Venha <span class="inteiro">conhecê-los</span> a Lagos</h3>
+        <p data-tbc="Tipos de visita e condições">Famílias, grupos com marcação e demonstrações na água na época balnear. A casa faz parte do roteiro cultural do Algarve.</p>
+        <a class="ligacao ligacao--clara" href="#contacto" data-motivo="visita">Marcar uma visita</a>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- Ninhada 2027 -->
-<section class="ninhada" id="ninhada" aria-labelledby="ninhada-titulo">
+<!-- Capítulo 3: a ninhada -->
+<section class="capitulo ninhada" id="ninhada" aria-labelledby="ninhada-titulo">
   <div class="caixa ninhada__in">
-    <figure class="janela">
+    <figure class="ninhada__foto revela">
       <img src="../assets/img/mae-ninhada.jpg" width="950" height="986" alt="Uma cadela de Água preta deitada a amamentar os seus cachorros." loading="lazy">
       <figcaption><q>São cães de emoção, são filhos, são família.</q> <span data-tbc="Confirmar autoria (A Magazine, 2021)">Rodrigo Pinto</span></figcaption>
     </figure>
     <div class="ninhada__texto">
       <h2 id="ninhada-titulo">A ninhada da primavera de 2027</h2>
-      <p class="ninhada__lead">Quem está na lista de espera recebe o diário, semana a semana.</p>
+      <p class="lead">Quem está na lista de espera recebe o diário, semana a semana.</p>
       <ol class="diario" data-tbc="Datas previstas da ninhada">
         <li class="agora"><time>Outubro 2026</time><b>Planeamento</b><span>Escolha dos pais e testes de saúde. Estamos aqui.</span></li>
         <li><time>Janeiro 2027</time><b>Acasalamento</b><span>Os pais e a genealogia no diário.</span></li>
@@ -139,54 +170,34 @@
   </div>
 </section>
 
-<!-- Cão Salva-Vidas: uma vigia de barco sobre o mar fundo -->
-<section class="salva" id="salva-vidas" aria-labelledby="salva-titulo">
+<!-- Clímax: o salva-vidas e a lista de espera -->
+<section class="capitulo salva" id="salva-vidas" aria-labelledby="salva-titulo">
   <div class="caixa salva__in">
+    <div class="salva__numero" aria-hidden="true">4</div>
     <div class="salva__texto">
       <h2 id="salva-titulo">Cão Salva-Vidas</h2>
-      <p class="salva__numero"><span>4</span> pessoas rebocadas de uma só vez, incluindo o nadador-salvador.</p>
+      <p class="lead">Um Cão de Água reboca quatro pessoas de uma só vez, incluindo o nadador-salvador.</p>
       <p>Treinamos em Lagos há cerca de quinze anos. Em Espanha e Itália já trabalha nas praias; em Portugal, ainda espera reconhecimento.</p>
-      <a class="ligacao ligacao--clara" href="#contacto">Apoiar o projeto</a>
-    </div>
-    <figure class="vigia">
-      <img src="../assets/img/salto-lagos.jpg" width="1536" height="1025" alt="Três Cães de Água a correr e a saltar na água em Lagos, junto às muralhas do forte." loading="lazy">
-    </figure>
-  </div>
-</section>
-
-<!-- Visitas -->
-<section class="visitas" id="visitas" aria-labelledby="visitas-titulo">
-  <div class="caixa visitas__in">
-    <img class="visitas__foto" src="../assets/img/praia-lagos.jpg" width="1200" height="800" alt="Cães de Água a brincar na praia de Lagos, com barcos à vela e as muralhas do forte ao fundo." loading="lazy">
-    <div class="visitas__texto">
-      <h2 id="visitas-titulo">Venha <span class="inteiro">conhecê-los</span> a Lagos</h2>
-      <p>A casa faz parte do roteiro cultural do Algarve. Recebemos:</p>
-      <ul data-tbc="Tipos de visita e condições">
-        <li>famílias interessadas na raça</li>
-        <li>grupos e excursões, com marcação</li>
-        <li>demonstrações na água, na época balnear</li>
-      </ul>
-      <a class="ligacao" href="#contacto" data-motivo="visita">Marcar uma visita</a>
+      <a class="ligacao ligacao--clara" href="#contacto" data-motivo="salva-vidas">Apoiar o projeto</a>
     </div>
   </div>
 </section>
 
-<!-- Lista de espera -->
-<section class="lista" id="contacto" aria-labelledby="lista-titulo">
+<section class="capitulo lista" id="contacto" aria-labelledby="lista-titulo">
   <div class="caixa lista__in">
     <div class="lista__texto">
-      <h2 id="lista-titulo">Como chegar a um cachorro</h2>
+      <h2 id="lista-titulo">Entrar na lista de espera</h2>
+      <p class="lead">Sem compromisso. Responde a quatro perguntas e falamos consigo.</p>
       <ol class="passos" data-tbc="Validar o processo com a criadora">
         <li><b>Conversa</b> ao telefone ou por mensagem.</li>
         <li><b>Visita</b> para conhecer os pais em Lagos.</li>
-        <li><b>Lista de espera</b> e o diário da ninhada.</li>
+        <li><b>Diário</b> da ninhada, semana a semana.</li>
         <li><b>Escolha a par</b> do feitio certo para a sua casa.</li>
         <li><b>Para sempre</b> por perto, toda a vida do cão.</li>
       </ol>
     </div>
 
     <form class="conversa" id="conversa" data-endpoint="" novalidate>
-      <p class="conversa__intro">Quatro perguntas, para lhe respondermos com tempo.</p>
       <div class="conversa__progresso" aria-hidden="true"><span></span></div>
       <p class="conversa__passo" aria-live="polite">Pergunta <b>1</b> de 4</p>
 
@@ -240,7 +251,7 @@
 
 <footer class="rodape">
   <div class="caixa rodape__in">
-    <a class="marca marca--grande" href="#inicio" aria-label="Casa da Buba, voltar ao início">
+    <a class="marca marca--grande" href="#superficie" aria-label="Casa da Buba, voltar ao início">
       <svg class="marca__simbolo" viewBox="0 0 100 124" aria-hidden="true"><use href="#simbolo"/></svg>
       <span>Casa da Buba</span>
     </a>
