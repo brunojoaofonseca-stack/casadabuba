@@ -1,11 +1,11 @@
-// Casa da Buba v2: menu, alternador, formulário da lista de espera e modo de revisão
+// Casa da Buba v2: menu, formulário da lista de espera e modo de revisão
 (() => {
   const $ = (s, el = document) => el.querySelector(s);
   const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 
   // Menu em ecrãs pequenos
   const menu = $('#menu');
-  const botaoMenu = $('.topo__menu');
+  const botaoMenu = $('.menu-botao');
   botaoMenu?.addEventListener('click', () => {
     const aberto = menu.classList.toggle('aberto');
     botaoMenu.setAttribute('aria-expanded', aberto);
@@ -13,33 +13,6 @@
   $$('a', menu).forEach(a => a.addEventListener('click', () => {
     menu.classList.remove('aberto');
     botaoMenu?.setAttribute('aria-expanded', 'false');
-  }));
-
-  // Duas velocidades: sem script os dois painéis aparecem seguidos
-  const separadores = $$('.seg [role="tab"]');
-  const escolher = tab => separadores.forEach(t => {
-    const sel = t === tab;
-    t.setAttribute('aria-selected', sel);
-    t.tabIndex = sel ? 0 : -1;
-    document.getElementById(t.getAttribute('aria-controls')).hidden = !sel;
-  });
-  separadores.forEach((t, i) => {
-    t.addEventListener('click', () => escolher(t));
-    t.addEventListener('keydown', e => {
-      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
-      const outro = separadores[(i + (e.key === 'ArrowRight' ? 1 : separadores.length - 1)) % separadores.length];
-      escolher(outro);
-      outro.focus();
-    });
-  });
-  if (separadores.length) escolher(separadores[0]);
-
-  // Fila dos cães: um retrato por toque
-  const fila = $('#cedulas');
-  $$('[data-rolar]').forEach(b => b.addEventListener('click', () => {
-    const passo = fila.querySelector('.cao').offsetWidth + parseFloat(getComputedStyle(fila).columnGap || 0);
-    const suave = matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
-    fila.scrollBy({ left: passo * Number(b.dataset.rolar), behavior: suave });
   }));
 
   // Lista de espera: quatro perguntas; ainda não está ligada a lado nenhum
@@ -89,17 +62,23 @@
     });
     voltar.addEventListener('click', () => mostrar(atual - 1));
     mostrar(1);
+
+    // "Marcar uma visita" já escolhe a resposta certa na primeira pergunta
+    $$('[data-motivo]').forEach(a => a.addEventListener('click', () => {
+      const opcao = form.querySelector(`input[name="motivo"][value="${a.dataset.motivo}"]`);
+      if (opcao) { opcao.checked = true; mostrar(1); }
+    }));
   }
 
-  // Modo de revisão: aparece depois do topo e destaca o que falta confirmar
-  const proto = $('.proto');
+  // Modo de revisão: aparece depois da fachada e esconde-se junto ao formulário
+  const caixaRever = $('.rever');
   const rever = $('#rever');
   const tbc = $$('[data-tbc]');
-  if (proto && rever) {
+  if (caixaRever && rever) {
     $('#rever-n').textContent = tbc.length;
-    const hero = $('.hero');
+    const fachada = $('.fachada');
     let noFormulario = false;
-    const aoRolar = () => { proto.hidden = noFormulario || scrollY < (hero ? hero.offsetHeight * 0.8 : 400); };
+    const aoRolar = () => { caixaRever.hidden = noFormulario || scrollY < (fachada ? fachada.offsetHeight * 0.8 : 400); };
     addEventListener('scroll', aoRolar, { passive: true });
     const contacto = $('#contacto');
     if (contacto) new IntersectionObserver(([e]) => { noFormulario = e.isIntersecting; aoRolar(); }).observe(contacto);
